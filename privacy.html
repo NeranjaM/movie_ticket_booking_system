@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color:#13032e;;
+}
+
+.navbar {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#13032e;
+    color: white;
+}
+
+.brand-title {
+    font-size: 1.5rem;
+    margin: .5rem;
+    font-size: 12px;
+}
+
+.navbar-links {
+    height: 100%;
+}
+
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: rgb(150, 185, 229);
+    padding: 1rem;
+    font-size: 25px;
+}
+
+.navbar-links li:hover {
+    background-color: #180442;
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+@media (max-width: 1000px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+}
+
+
+ html  {
+box-sizing:border-box;
+}
+
+*, *:before,*:after  {
+   box-sizing:inherit;
+   } 
+
+.policy-section  {
+ padding:50px;
+ margin:120px;
+ text-align:justify;
+ background-color:#c7dbef;
+ color:rgb(6, 1, 1);
+ font-size:17px;
+ }
+ 
+ .title {
+color:gray;
+}
+
+*{
+margin:0;
+padding:0;
+font-family:Arial;
+box-sizing:border-box;
+
+
+}
+
+.footer{
+width:100%;
+position:absolute;
+bottom:0;
+background:#0e0f45;
+color:#dedce4;
+padding:100px 0 30px;
+border-top-left-radius:125px;
+font-size:13px;
+line-height:20px;
+}
+
+.row {
+width:85%;
+margin:auto;
+display:flex;flex-wrap:wrap;
+align-items:flex-start;
+justify-content:space-between;
+}
+
+.col {
+flex-basis:20%;
+padding:10px;
+}
+
+.col:nth-child(2),.col:nth-child(3){
+flex-basis:15%;
+}
+
+.col h3 {
+width:fit-content;
+margin-bottom:40px;
+position:relative;
+color: #ede8ef;
+}
+
+ul li {
+list-style:none;
+margin-bottom:12px;
+}
+
+ul li a {
+text-decoration:none;
+color:#f3eded;
+}
+
+ul li p {
+text-decoration:none;
+color:#bdcd94;
+}
+
+form {
+padding-bottom:15px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+border-bottom:1px solid #ccc;
+margin-bottom:50px;
+}
+
+form input {
+width:100%;
+background:transparent;
+color:#ccc;
+border:0;
+outline:none;
+}
+
+form button {
+background:transparent;
+border:0;
+outline:none;
+cursor:pointer;
+}
+
+form button .fas{
+font-size:15px;
+color:#ccc;
+}
+
+social-icons {
+ margin-top:30px;
+}
+
+.social-icons i {
+ font-size:16px;
+ margin:2px;
+ cursor:pointer;
+ color: #fff;
+ }
+
+hr {
+width:90%;
+border:0;
+border-bottom:2px solid #696969;
+margin:20px auto;
+}
+
+.copyright {
+text-align:center;
+color: #ebb5dc;
+}
+
+.underline {
+width:100%;
+height:4px;
+background:#DC143C;
+border-radius:3px;
+position:absolute;
+top:25px;
+left:0;
+}
+
+.underline span{
+width:15px;
+height:100%;
+background:#FFE4E1;
+border-radius:3px;
+position:absolute;
+top:0;
+left:10px;
+animation:moving 2s linear infinite;
+}
+
+@keyframes moving {
+0%{
+   left:-20px;
+}
+
+100%{
+   left:100px;
+}
+}
+
+
+@media (max-width:700px){
+footer {
+   bottom:unset;
+}
+.col {
+  flex-basis:100%;
+}
+.col:nth-child(2),.col:nth-child(3){
+flex-basis:100%;
+}
+}
+
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+<div class="brand-title"><em>CinemArt</em></div>
+<a href="#" class="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+</a>
+<div class="navbar-links">
+<ul>
+<li><a href="home.html">Home</a></li>
+<li><a href="new flip.html">Movies</a></li>
+<li><a href="theaters.html">Theater</a></li>
+<li><a href="contact new2.php">Contact Us</a></li>
+</ul>
+</div>
+</nav>
+
+<script>
+const toggleButton = document.getElementsByClassName('toggle-button')[0]
+const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+
+toggleButton.addEventListener('click', () => {
+  navbarLinks.classList.toggle('active')
+})
+
+</script>
+
+<div class="policy-section">
+<h1 style="text-align:center; color:blue"><b>PRIVACY POLICY</b></h1><br>
+<p><strong>CinemArt,</strong> is commited to meeting and exceeding the expectations of our customers and other interested parties regarding the quality of our products and services</p>
+
+<a href="home.html"></a>
+</div>
+
+<hr>
+
+
+<footer>
+<body>
+
+<div class="row">
+    <div class="col">
+        <h3>About</h3>
+        <!-- <img src="logo.jpg"> -->
+        <p style="color: antiquewhite;"><strong>CinemArt</strong> is a Online Movie Tickets Booking System. Here customer's can easily book tickets from anywhere through the internet. </p>
+    </div>
+
+
+ <div class="col">
+   
+<h3>Useful Links<div class="underline"><span></span></div></h3>
+<ul>
+<li><a href="home.html"><Useful Links>Home</Useful Links></a></li>
+ <li><a href="privacy.html"><Useful Links>Privacy</Useful Links></a></li>
+</ul>
+</div>
+
+ 
+
+
+<div  class="col">
+<h3>Newsletter<div class="underline"><span></span></div> </h3>
+<form>
+   <input type="Email"  placeholder="Your Email Address" required>
+   <br>
+   <button type="submit"><i class="fas fa-arrow-right"></i></button>
+   </form>
+</div>
+  
+<div  class="col">
+<h3>Contact<div class="underline"><span></span></div></h3>
+<ul>
+   <li><p>Email: <a href="mailto:cinemartofficial16@gmail.com" target="_top">cinemartofficial16@gmail.com</p></a></li><br>
+   <li><p>Tel: <a href="tel:0252 547 619" target="_top">0252 547 619</p></a></li><br>
+   <li><p>Address: <a href="address:Main Street,Kahatagasdigiliya target=_top">Main Street,Kahatagasdigiliya</p></a></li><br>
+   </ul>
+   </div>
+ 
+<div  class="col"> 
+<h3>Follow Us<div class="underline"><span></span></div></h3>  
+<div class="social-icons">
+<a href="https://www.facebook.com/profile.php?id=61551858415781&mibextid=ZbWKwL"><i class="fa fa-facebook"></i></a>
+<a href="https://wa.me/+94769802944"  target="_blank"><i class="fa fa-whatsapp"></a></i>
+<a href="tel:0719 388407"><i class="fa fa-phone"></a></i>
+<a href="tel:0252 547 619"><i class="fa fa-tty"></a></i>
+</div>
+</div>
+</div>
+
+
+<hr>
+
+
+<p class="copyright"> &copy;All Copyright Received by CinemArt 2023</p>
+</footer>
+
+</body>
+</html>

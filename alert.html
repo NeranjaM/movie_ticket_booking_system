@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    body{
+        background: linear-gradient(
+to right,
+rgb(31, 35, 53),
+ rgb(35, 19, 8)
+);
+    }
+.alert {
+  padding: 50px;
+  text-align: center;
+  margin-top: 200px;
+  width: 30%;
+  font-size: 20px;
+  margin-left: 400px;
+  background-color: #c7c8e8;
+  color: rgb(10, 9, 9);
+}
+
+.closebtn {
+  margin-left: px;
+  color: rgb(10, 10, 10);
+  font-weight: bold;
+  float: right;
+  font-size: 35px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: rgb(12, 43, 215);
+}
+</style>
+</head>
+<body>
+
+
+
+<!-- <p>Click on the "x" symbol to close the alert message.</p> -->
+<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+   <strong>Payment Succesfull</strong>
+</div>
+
+</body>
+</html>

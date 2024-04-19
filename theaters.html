@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Theaters</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,400;1,200;1,400&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    margin-bottom: 30px;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(209, 189, 211);
+    color: rgb(10, 10, 10);
+}
+
+.brand-title {
+    font-size: 1.5rem;
+    margin: .5rem;
+}
+
+.navbar-links {
+    height: 100%;
+}
+
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: rgb(18, 1, 1);
+    padding: 1rem;
+    font-size: 25px;
+}
+
+.navbar-links li:hover {
+    background-color: #d491b4;
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+@media (max-width: 1000px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-size: 1rem;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 4rem 0;
+    background-color: rgb(209, 189, 211);
+}
+
+.img-box {
+    display: block;
+    width: 80%;
+    height: 30rem;
+    object-fit: cover;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    grid-gap: 2rem;
+    text-align: center;
+    width: 90%;
+    margin: auto;
+}
+
+ .card {
+    display: block;
+    overflow: hidden;
+    border-radius: 0.6rem;
+    box-shadow: 0 0.5rem 1rem rgba(9, 9, 9, 0.7);
+    cursor: pointer;
+    transition: 0.2s;
+    position: relative;
+}
+
+.card-content{
+    position: absolute;
+    background-color: #240223;
+    bottom: 0;
+    color: rgb(253, 247, 247);
+    width: 100%;
+    height: 40%;
+    padding: 2.2rem 0;
+     overflow: hidden; 
+    transition: .7s;
+} 
+
+.card-content h3{
+    color: rgb(235, 237, 118);
+    font-size: 2rem;
+    font-weight: 300;
+    text-transform: capitalize;
+}
+
+.card-content p{
+    font-size: 1rem;
+    font-weight: 200;
+    line-height: 1.5rem;
+    padding: 1.2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-content :hover{
+height: 60%;
+transition: 0.7s;
+}
+
+
+
+
+@media (max-width:767px) {
+    .grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+*{
+margin:0;
+padding:0;
+font-family:Arial;
+box-sizing:border-box;
+}
+
+.footer{
+width:100%;
+position:absolute;
+bottom:0;
+background:#020322;
+color:#03000b;
+padding:100px 0 30px;
+border-top-left-radius:125px;
+font-size:13px;
+line-height:20px;
+}
+
+.row {
+width:85%;
+margin:auto;
+display:flex;flex-wrap:wrap;
+align-items:flex-start;
+justify-content:space-between;
+}
+
+.col {
+flex-basis:20%;
+padding:10px;
+}
+
+.col:nth-child(2),.col:nth-child(3){
+flex-basis:15%;
+}
+
+.col h3 {
+width:fit-content;
+margin-bottom:40px;
+position:relative;
+color: #060009;
+}
+
+ul li {
+list-style:none;
+margin-bottom:12px;
+}
+
+ul li a {
+text-decoration:none;
+color:#050000;
+}
+
+ul li p {
+text-decoration:none;
+color:#1a121f;
+}
+
+form {
+padding-bottom:15px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+border-bottom:1px solid #080808;
+margin-bottom:50px;
+}
+
+form input {
+width:100%;
+background:transparent;
+color:#ccc;
+border:0;
+outline:none;
+}
+
+form button {
+background:transparent;
+border:0;
+outline:none;
+cursor:pointer;
+}
+
+form button .fas{
+font-size:15px;
+color:#0a0a0a;
+}
+
+social-icons {
+ margin-top:30px;
+}
+
+.social-icons i {
+ font-size:16px;
+ margin:2px;
+ cursor:pointer;
+ color: #05065a;
+ }
+
+hr {
+width:90%;
+border:0;
+border-bottom:2px solid #696969;
+margin:20px auto;
+}
+
+.copyright {
+text-align:center;
+color: #ebb5dc;
+}
+
+.underline {
+width:100%;
+height:4px;
+background:#DC143C;
+border-radius:3px;
+position:absolute;
+top:25px;
+left:0;
+}
+
+.underline span{
+width:15px;
+height:100%;
+background:#FFE4E1;
+border-radius:3px;
+position:absolute;
+top:0;
+left:10px;
+animation:moving 2s linear infinite;
+}
+
+@keyframes moving {
+0%{
+   left:-20px;
+}
+
+100%{
+   left:100px;
+}
+}
+
+
+@media (max-width:700px){
+footer {
+   bottom:unset;
+}
+.col {
+  flex-basis:100%;
+}
+.col:nth-child(2),.col:nth-child(3){
+flex-basis:100%;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<nav class="navbar">
+<div class="brand-title"><em>CinemArt</em></div>
+<a href="#" class="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+</a>
+<div class="navbar-links">
+<ul>
+<li><a href="home.html">Home</a></li>
+<li><a href="new flip.html">Movies</a></li>
+<li><a href="theaters.html">Theater</a></li>
+<li><a href="contact new2.php">Contact Us</a></li>
+</ul>
+</div>
+</nav>
+
+<script>
+const toggleButton = document.getElementsByClassName('toggle-button')[0]
+const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+
+toggleButton.addEventListener('click', () => {
+  navbarLinks.classList.toggle('active')
+})
+                </script>
+
+
+<section class="container">
+<div class="class grid">
+<div class="card">
+<div class="img-box">
+<img src="img/wilmax.jpg">
+</div>
+<div class="card-content">
+<h3 class="card-heading">Wilmax Anuradhapura</h3>
+<p class="card-text">No 5014/02, Maithripala Senanayaka Mawatha,Anuradhapura<br>Tel:94257429300 <br>Email:wilmax@eapmovies.com</p>
+</div>
+</div>
+
+<div class="card">
+        <div class="img-box">
+        <img src="img/concord-dehiwala.jpg">
+        </div>
+        <div class="card-content">
+        <h3 class="card-heading">Concord</h3>
+        <p class="card-text">No 139, Galle Road, Dehiwala <br>Tel:94117549630 <br>Concord@eapmovies.com</p>
+        </div>
+        </div>
+
+   
+
+               <div class="card">
+                <div class="img-box">
+                <img src="img/cinemax jaela.jpg">
+                </div>
+                <div class="card-content">
+                <h3 class="card-heading">Cinemax 3D</h3>
+                <p class="card-text">N0 165, Reality Plaza, Colombo Road, Ja-ela<br>Tel:94117549650 <br>cinemax@eapmovies.com</p>
+                </div>
+                </div>
+
+                <div class="card">
+                    <div class="img-box">
+                    <img src="img/milanogold.jpg">
+                    </div>
+                    <div class="card-content">
+                    <h3 class="card-heading">Milano-Gold</h3>
+                    <p class="card-text">DD Athukorala Supermarket(pvt) ltd, No 122, Main Street, Kegalle<br>Tel:94352221222 <br>milanomovie@gmail.com</p>
+                    </div>
+                    </div>
+                    
+                    <div class="card">
+                    <div class="img-box">
+                    <img src="img/milano-diamond.jpg">
+                    </div>
+                    <div class="card-content">
+                    <h3 class="card-heading">Milano-Diamond</h3>
+                    <p class="card-text">DD Athukorala Supermarket(pvt) ltd, No 122, Main Street, Kegalle<br>Tel:94352221222 <br>milanomovie@gmail.com </p>
+                    </div>
+                    </div>
+
+                <div class="card">
+                    <div class="img-box">
+                    <img src="img/sinexpo.jpg">
+                    </div>
+                    <div class="card-content">
+                    <h3 class="card-heading">Sinexpo 3D</h3>
+                    <p class="card-text">No 18,South Circular Road, Kurunegala <br>Tel:94377214542 <br>sinexpo@eapmovies.com</p>
+                    </div>
+                    </div>
+
+                
+
+                <div class="card">
+                    <div class="img-box">
+                    <img src="img/tower.jpg">
+                    </div>
+                    <div class="card-content">
+                    <h3 class="card-heading">Tower</h3>
+                    <p class="card-text">No 670, Galle Road,Moratuwa <br>Tel:94117432434 <br>Emali:tower@eapmovies.com</h1></p>
+                    </div>
+                    </div>
+                
+
+<div class="card">
+<div class="img-box">
+<img src="img/jothi.jpg">
+</div>
+<div class="card-content">
+<h3 class="card-heading">Jothi</h3>
+<p class="card-text">203,Bandaranayaka Mawatha, Rathnapura <br>Tel:94457213751 <br>Emali:jothi@eapmovies.com</h1></p>
+</div>
+</div>
+
+
+
+
+
+
+            
+</div>
+</section>
+
+<hr>
+
+
+<footer>
+<body>
+
+<div class="row">
+    <div class="col">
+        <h3>About<div class="underline"><span></span></div></h3>
+        <!-- <img src="logo.jpg"> -->
+        <p style="color: rgb(17, 49, 55);"><strong>CinemArt</strong> is a Online Movie Tickets Booking System. Here customer's can easily book tickets from anywhere through the internet. </p>
+    </div>
+
+
+ <div class="col">
+   
+<h3>Useful Links<div class="underline"><span></span></div></h3>
+<ul>
+<li><a href="home.html"><Useful Links>Home</Useful Links></a></li>
+ <li><a href="privacy.html"><Useful Links>Privacy</Useful Links></a></li>
+</ul>
+</div>
+
+ 
+<div  class="col">
+<h3>Newsletter<div class="underline"><span></span></div> </h3>
+<form>
+   <input type="Email"  placeholder="Your Email Address" required>
+   <br>
+   <button type="submit"><i class="fas fa-arrow-right"></i></button>
+   </form>
+</div>
+  
+<div  class="col">
+<h3>Contact<div class="underline"><span></span></div></h3>
+<ul>
+   <li><p>Email: <a href="mailto:cinemartofficial16@gmail.com" target="_top">cinemartofficial16@gmail.com</p></a></li><br>
+   <li><p>Tel: <a href="tel:0252 547 619" target="_top">0252 547 619</p></a></li><br>
+   <li><p>Address: <a href="address:Main Street,Kahatagasdigiliya target=_top">Main Street,Kahatagasdigiliya</p></a></li><br>
+   </ul>
+   </div>
+ 
+<div  class="col"> 
+<h3>Follow Us<div class="underline"><span></span></div></h3>  
+<div class="social-icons">
+<a href="https://www.facebook.com/profile.php?id=61551858415781&mibextid=ZbWKwL"><i class="fa fa-facebook"></i></a>
+<a href="https://wa.me/+94769802944"  target="_blank"><i class="fa fa-whatsapp"></a></i>
+<a href="tel:0719 388407"><i class="fa fa-phone"></a></i>
+<a href="tel:0252 547 619"><i class="fa fa-tty"></a></i>
+</div>
+</div>
+</div>
+
+
+<hr>
+
+
+<p class="copyright"> &copy;All Copyright Received by CinemArt 2023</p>
+</footer>
+</body>
+
+
+</html>
